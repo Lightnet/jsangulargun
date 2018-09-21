@@ -6,8 +6,6 @@
 
 routes.$inject = ['$stateProvider'];
 
-//var accesshtml = require('./access.html');
-
 export default function routes($stateProvider) {
   $stateProvider
     .state('message', {

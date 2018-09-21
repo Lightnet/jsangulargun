@@ -1,12 +1,18 @@
+/*
+ Created by: Lightnet
+
+
+*/
 
 import _global from '../../_global';
 
 export default class AccessController {
-    constructor($scope, $location) {
+    constructor($scope,$state) {
+		console.log($state)
 		//console.log($scope)
 		//console.log($location)
 		this.$scope = $scope;
-		this.$location = $location;
+		this.$state = $state;
 
 		this.gun = _global.getgun();
 		this.name = 'Guest';
@@ -22,9 +28,17 @@ export default class AccessController {
 		//console.log(this.passphrase);
 		//console.log(this.gun);
 
-		var user = this.gun.user();
-        var self = this;
+		console.log(this);
 
+		var self = this;
+		this.seaAuthUser((ack)=>{
+			console.log("login:",ack);
+			self.$state.go('home');
+		});
+	}
+
+	seaAuthUser(callback){
+		var user = this.gun.user();
 		user.auth(this.alias, this.passphrase,(ack)=>{
 			//console.log(ack);
 			if(ack.err){
@@ -33,11 +47,13 @@ export default class AccessController {
 					//message: 'Auth attempt failed!',
 					//type: 'is-danger'
 				//});
+				callback(false);
 			}else{
 				console.log("Authorized!");
-				self.$location.path('/home');
-				self.$location.path('/home');
-				self.$location.path('/home');
+				//self.$location.path('/home');
+				//self.$location.path('/home');
+				//self.$location.path('/home');
+				callback(true);
 				//self.$parent.$emit('view','index');
 				//self.$toast.open({
 					//message: 'Authorized!',

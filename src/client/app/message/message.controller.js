@@ -1,13 +1,22 @@
+/*
+ Created by: Lightnet
+
+
+*/
 
 import _global from '../../_global';
 
 export default class MessageController {
-    constructor($scope, $location) {
+    constructor($scope, $state) {
 		console.log($scope)
-		console.log($location)
+		//console.log($state)
 		this.$scope = $scope;
-		this.$location = $location;
+		//this.$state = $state;
 
 		this.gun = _global.getgun();
+		let user = this.gun.user();
+		if(!user.is){
+			$state.go('access');
+		}
     }
 }

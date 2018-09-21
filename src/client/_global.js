@@ -1,3 +1,9 @@
+/*
+ Created by: Lightnet
+
+
+*/
+
 export default class Global {
 
     static setgun(gun) {

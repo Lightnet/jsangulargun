@@ -3,13 +3,6 @@
 
 
 */
-/*
- Created by: Lightnet
-
-
-*/
-
-
 
 routes.$inject = ['$stateProvider'];
 

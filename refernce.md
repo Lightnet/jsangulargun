@@ -16,7 +16,15 @@ https://ui-router.github.io/ng1/docs/1.0.0/modules/directives.html
 </div>
 
 ```
- * 
+ * https://github.com/angular-ui/ui-router/wiki/Quick-Reference
+ * https://github.com/angular-ui/ui-router/wiki/Quick-Reference#stategoto--toparams--options
+ * https://docs.angularjs.org/guide/controller
+ * https://scotch.io/tutorials/making-skinny-angularjs-controllers
+
+
+
+ * https://github.com/angular-ui/ui-router/issues/1031
+ * https://www.codemag.com/article/1505061/Easier-AngularJS-Routing-with-Angular-UI-Router
  * https://www.toptal.com/angular-js/top-18-most-common-angularjs-developer-mistakes
  * https://netbasal.com/implementing-dynamic-views-in-angular-20ae7c62fec3
  * https://stackoverflow.com/questions/40044577/angular-js-is-it-possible-to-route-using-html-tag-button

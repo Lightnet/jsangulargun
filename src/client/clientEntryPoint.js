@@ -58,11 +58,10 @@ function init(){
         console.log('Disconnected from peer!');
     });
 
+    //angular.prototype.gun = gun;
     _global.setgun(gun);
-
     $("#loading").empty();//empty element html when finish loading javascript...
     //console.log("====Init App?====");
-
     //angular.module('HelloWorldApp', [])
     //.controller('HelloWorldController', function($scope) {
         //$scope.greeting = "Hello World";
